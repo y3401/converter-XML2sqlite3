@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # Выгрузка из DB SQLite3 в CSV с сортировкой по возрастанию file_id
 
 import sqlite3
@@ -33,7 +32,7 @@ def DBExport(dirdb='',category=0):
     WHERE category_id=?
     ORDER BY file_id;""", (category,))
 
-    F = open(dirdb+period+'/category_'+str(category)+'.csv','w',encoding = 'utf-8')    
+    F = open(dirdb+period+'/category_'+str(category)+'.csv','w',encoding = 'utf8')    
 
     for row in c.fetchall():
         file_id=row[0]
@@ -58,7 +57,7 @@ def expCategory(dirdb=''):
     SELECT code_category,name_category
     FROM category ORDER BY code_category;""")
 
-    F = open(dirdb+period+'/category_info.csv','w',encoding = 'utf-8')    
+    F = open(dirdb+period+'/category_info.csv','w',encoding = 'utf8')    
 
     for row in c.fetchall():
         code_cat=row[0]
@@ -79,7 +78,7 @@ def expForums(dirdb=''):
     SELECT code_forum,name_forum,category_id
     FROM forum ORDER BY category_id,code_forum;""")
 
-    F = open(dirdb+period+'/forums.csv','w',encoding = 'utf-8')    
+    F = open(dirdb+period+'/forums.csv','w',encoding = 'utf8')    
 
     for row in c.fetchall():
         code_forum=row[0]
