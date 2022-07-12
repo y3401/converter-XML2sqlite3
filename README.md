@@ -10,3 +10,5 @@
 БД *content.db3* не менялась
 
 Реализовано через интерфейс tkinter
+
+P.S. Исходный xml-дамп на https://rutracker.org/forum/viewtopic.php?t=5591249 или https://disk.yandex.ru/d/eVzauRIH3ZCKam  
